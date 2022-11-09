@@ -7,7 +7,11 @@ const router = express.Router()
 
 router.get('/', ctrlWrapper(ctrl.getAllCourses));
 
+router.get('/:courseId', ctrlWrapper(ctrl.getCourseById));
+
 router.post('/', validation(courseJoiSchema), ctrlWrapper(ctrl.createCourse));
+
+router.put('/:courseId', validation(courseJoiSchema), ctrlWrapper(ctrl.updateCourse));
 
 router.delete('/:courseId', ctrlWrapper(ctrl.removeCourse));
 
