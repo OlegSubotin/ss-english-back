@@ -1,25 +1,19 @@
 const express = require('express')
+const { ctrlWrapper, validation } = require('../../helpers');
+const { lessons: ctrl } = require('../../controllers');
+const { lessonJoiSchema } = require('../../models/lesson');
 
 const router = express.Router()
 
-router.get('/', async (req, res, next) => {
-  res.json({ message: 'hi Andrew, I am here' })
-})
+router.get('/', ctrlWrapper(ctrl.getAllLessons));
 
-router.get('/:lessonId', async (req, res, next) => {
-  res.json({ message: 'template message' })
-})
+router.get('/:lessonId', ctrlWrapper(ctrl.getLessonById));
 
-router.post('/', async (req, res, next) => {
-  res.json({ message: 'template message' })
-})
+router.post('/', validation(lessonJoiSchema), ctrlWrapper(ctrl.createLesson));
 
-router.delete('/:lessonId', async (req, res, next) => {
-  res.json({ message: 'template message' })
-})
+router.put('/:lessonId', validation(lessonJoiSchema), ctrlWrapper(ctrl.updateLesson));
 
-router.put('/:lessonId', async (req, res, next) => {
-  res.json({ message: 'template message' })
-})
+router.delete('/:lessonId', ctrlWrapper(ctrl.removeLesson));
+
 
 module.exports = router

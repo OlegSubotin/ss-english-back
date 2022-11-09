@@ -15,43 +15,4 @@ router.put('/:courseId', validation(courseJoiSchema), ctrlWrapper(ctrl.updateCou
 
 router.delete('/:courseId', ctrlWrapper(ctrl.removeCourse));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// router.get('/:lessonId', async (req, res, next) => {
-//   res.json({ message: 'template message' })
-// })
-
-// router.post('/', async (req, res, next) => {
-//   res.json({ message: 'template message' })
-// })
-
-// router.delete('/:lessonId', async (req, res, next) => {
-//   res.json({ message: 'template message' })
-// })
-
-// router.put('/:lessonId', async (req, res, next) => {
-//   res.json({ message: 'template message' })
-// })
-
 module.exports = router
