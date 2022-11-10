@@ -4,7 +4,6 @@ const Joi = require("joi");
 const lessonSchema = Schema({
   name: {
     type: String,
-    unique: true,
     required: [true, 'Set name for the lesson'],
   },
   courseId: {
@@ -13,7 +12,6 @@ const lessonSchema = Schema({
   },
   order: {
     type: Number,
-    unique: true,
     required: [true, 'Set order number for the lesson'],
   }
 }, { versionKey: false, timestamps: true });

@@ -1,6 +1,6 @@
 const { Course } = require("../../models/course");
 
-const createCourse = async (id, body) => {
+const updateCourse = async (id, body) => {
   try {
     const data = await Course.findByIdAndUpdate(id, body, { new: true });
     return data;
@@ -9,4 +9,4 @@ const createCourse = async (id, body) => {
   }
 };
 
-module.exports = createCourse;
+module.exports = updateCourse;

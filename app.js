@@ -3,7 +3,7 @@ const logger = require('morgan')
 const cors = require('cors')
 require("dotenv").config()
 
-// const lessonsRouter = require('./routes/api/lessons')
+const lessonsRouter = require('./routes/api/lessons')
 const coursesRouter = require('./routes/api/courses')
 
 const app = express()
@@ -14,7 +14,7 @@ app.use(logger(formatsLogger))
 app.use(cors())
 app.use(express.json())
 
-// app.use('/api/lessons', lessonsRouter)
+app.use('/api/lessons', lessonsRouter)
 app.use('/api/courses', coursesRouter)
 
 app.use((req, res) => {
