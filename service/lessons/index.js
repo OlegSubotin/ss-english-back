@@ -1,5 +1,6 @@
-const createLesson = require('./createLesson');
+const getAllLessonsByCourseId = require('./getAllLessonsByCourseId');
 
 module.exports = {
-  createLesson,
+  getAllLessonsByCourseId,
+  
 }

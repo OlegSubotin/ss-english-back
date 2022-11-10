@@ -5,7 +5,7 @@ const updateCourse = async (req, res) => {
   const { courseId } = req.params;
   const course = await service.getCourseById(courseId);
   if (!course) {
-    throw createError(404, 'Not found course with such id');
+    throw createError(404, 'No course with such id');
   }
   const result = await service.updateCourse(courseId, req.body);
   res.status(201).json({

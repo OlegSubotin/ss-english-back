@@ -1,13 +1,15 @@
 const getAllCourses = require('./getAllCourses');
 const createCourse = require('./createCourse');
 const removeCourse = require('./removeCourse');
-const getCourseById = require('./getCourseById');
 const updateCourse = require('./updateCourse');
+const getCourseByOption = require('./getCourseByOption');
+const getCourseById = require('./getCourseById');
 
 module.exports = {
   getAllCourses,
   createCourse,
   removeCourse,
-  getCourseById,
-  updateCourse
+  updateCourse,
+  getCourseByOption,
+  getCourseById
 }

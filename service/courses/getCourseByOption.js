@@ -1,8 +1,8 @@
 const { Course } = require("../../models/course");
 
-const getCourseByOption = async (courseId) => {
+const getCourseByOption = async (option) => {
   try {
-    const data = await Course.findById(courseId);
+    const data = await Course.find(option);
     return data;
   } catch (error) {
     console.log(error.message);
