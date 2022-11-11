@@ -22,9 +22,14 @@ const lessonJoiSchema = Joi.object({
   order: Joi.number().min(1).max(100).required(),
 });
 
+const lessonRemoveJoiSchema = Joi.object({
+  id: Joi.string().length(24).required(),
+})
+
 const Lesson = model("lesson", lessonSchema);
 
 module.exports = {
   Lesson,
   lessonJoiSchema,
+  lessonRemoveJoiSchema,
 };
