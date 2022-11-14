@@ -29,4 +29,7 @@ router.post('/:lessonId/description', validation(lessonDescriptionJoiSchema), ct
 // get description for the lesson
 router.get('/:lessonId/description', ctrlWrapper(ctrl.getLessonDescription));
 
+// update description for the lesson
+router.put('/:lessonId/description', validation(lessonDescriptionJoiSchema), ctrlWrapper(ctrl.updateLessonDescription));
+
 module.exports = router
