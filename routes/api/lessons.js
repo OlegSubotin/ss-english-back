@@ -32,4 +32,7 @@ router.get('/:lessonId/description', ctrlWrapper(ctrl.getLessonDescription));
 // update description for the lesson
 router.put('/:lessonId/description', validation(lessonDescriptionJoiSchema), ctrlWrapper(ctrl.updateLessonDescription));
 
+// delete lesson description
+router.delete('/:lessonId/description', ctrlWrapper(ctrl.removeLessonDescription));
+
 module.exports = router

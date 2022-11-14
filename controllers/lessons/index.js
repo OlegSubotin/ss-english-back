@@ -6,6 +6,7 @@ const getLessonDescription = require('./getLessonDescription');
 const getLessonByLessonId = require('./getLessonByLessonId');
 const createLessonDescription = require('./createLessonDescription');
 const updateLessonDescription = require('./updateLessonDescription');
+const removeLessonDescription = require('./removeLessonDescription');
 
 module.exports = {
   createLesson,
@@ -15,5 +16,6 @@ module.exports = {
   getLessonByLessonId,
   createLessonDescription,
   getLessonDescription,
-  updateLessonDescription
+  updateLessonDescription,
+  removeLessonDescription,
 }
