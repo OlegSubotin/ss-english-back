@@ -1,9 +1,9 @@
 const { lessons: service } = require("../../service");
 
 const removeLesson = async (req, res) => {
-  const { id } = req.body;
-  
+  const { id } = req.body;  
   const result = await service.removeLesson(id);
+  await service.removeLessonDescription(id);
   res.status(201).json({
     status: "success",
     code: 201,
