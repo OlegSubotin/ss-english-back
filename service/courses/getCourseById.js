@@ -1,6 +1,6 @@
 const { Course } = require("../../models/course");
 
-const getCourseByOption = async (courseId) => {
+const getCourseByCourseId = async (courseId) => {
   try {
     const data = await Course.findById(courseId);
     return data;
@@ -9,4 +9,4 @@ const getCourseByOption = async (courseId) => {
   }
 };
 
-module.exports = getCourseByOption;
+module.exports = getCourseByCourseId;
