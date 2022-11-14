@@ -22,6 +22,11 @@ router.put('/:lessonId', validation(lessonJoiSchema), ctrlWrapper(ctrl.updateLes
 router.delete('/', validation(lessonRemoveJoiSchema), ctrlWrapper(ctrl.removeLesson));
 
 // DESCRIPTION BLOCK
+
+// create description for the lesson
 router.post('/:lessonId/description', validation(lessonDescriptionJoiSchema), ctrlWrapper(ctrl.createLessonDescription));
+
+// get description for the lesson
+router.get('/:lessonId/description', ctrlWrapper(ctrl.getLessonDescription));
 
 module.exports = router
