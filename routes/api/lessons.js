@@ -44,4 +44,7 @@ router.delete('/:lessonId/description', ctrlWrapper(ctrl.removeLessonDescription
 //create vocabulary for the lesson
 router.post('/:lessonId/vocabulary', validation(lessonVocabularyJoiSchema), ctrlWrapper(ctrlVocabulary.createLessonVocabulary));
 
+//update vocabulary for the lesson
+router.put('/:lessonId/vocabulary', validation(lessonVocabularyJoiSchema), ctrlWrapper(ctrlVocabulary.updateLessonVocabulary));
+
 module.exports = router
